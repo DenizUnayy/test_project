@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/3f9e8395db.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/main.scss" />
     <title>My Personal Portfolio</title>
   </head>
@@ -25,7 +26,7 @@
           <li>Projects</li>
         </a>
       </ul>
-      <button>Contact Me!</button>
+      <button><a href="mailto:denizunayy@gmail.com">Contact Me!</a></button>
     </nav>
 
     <header>
@@ -33,7 +34,6 @@
         <h1>Hi there! I`m Deniz</h1>
         <h2>An aspiring Software Engineer from Düsseldorf</h2>
       </div>
-      
     </header>
     <section class="about" id="about">
       <div class="aboutme">
@@ -42,7 +42,13 @@
           Hi. I`m Deniz. I am from Turkey and moved to Germany at the end of
           2019. I studied English to Turkish translation back home but I found
           my true passion in coding! I am currently doing a coding bootcamp at
-          <a class="dcihover" target="_blank" href="https://digitalcareerinstitute.org/de/">Digital Career Institute</a> and will be graduating at the end of 2023!
+          <a
+            class="dcihover"
+            target="_blank"
+            href="https://digitalcareerinstitute.org/de/"
+            >Digital Career Institute</a
+          >
+          and will be graduating at the end of 2023!
         </p>
       </div>
     </section>
@@ -61,7 +67,10 @@
           <p>CSS3</p>
         </div>
         <div class="skillbox">
-          <img src="./images/javascript-39397.png" alt="The Logo of Javascript" />
+          <img
+            src="./images/javascript-39397.png"
+            alt="The Logo of Javascript"
+          />
           <p>JAVASCRIPT</p>
         </div>
         <div class="skillbox">
@@ -72,25 +81,31 @@
           <img src="./images/bootstrap.png" alt="The Logo of Bootsrap" />
           <p>BOOTSTRAP</p>
         </div>
-        
       </div>
     </section>
 
-    
-
-    <!-- <section>
+    <!-- <section class="formsection">
       <form method="Post" action="https://formspree.io/f/xwkzdknp">
-        <label for="name"></label>
-        <input type="text" name="name" id="name" placeholder="Your Name" />
-        <label for="email"></label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Your Email Adress"
-        />
-        <label for="subject"></label>
-        <input type="text" name="subject" id="subject" placeholder="Subject" />
+        <div class="nameandemail">
+          <label for="name"></label>
+          <input type="text" name="name" id="name" placeholder="Your Name" />
+          <label for="email"></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Adress"
+          />
+        </div>
+        <div class="subject">
+          <label for="subject"></label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+          />
+        </div>
 
         <textarea
           name="message"
@@ -99,9 +114,26 @@
           rows="10"
           placeholder="Message"
         ></textarea>
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" />
       </form>
     </section> -->
 
+    <footer>
+      <div class="footerwrapper">
+        <div class="footerlist">
+          <h2><a href="header">Home</a></h2>
+          <h2><a href="#about">About</a></h2>
+          <h2><a href="#skillssection">Skills</a></h2>
+          <h2><a href="">Projects</a></h2>
+        </div>
+        <div class="footericons">
+          <h2>Keep in touch!</h2>
+          <a target="_blank" href="https://github.com/DenizUnayy"><i class="fa-brands fa-github"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/deniz-unay-535544233/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:denizunayy@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <p>&copy;2023 Deniz Unay</p>
+    </footer>
   </body>
 </html>

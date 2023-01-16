@@ -30,6 +30,16 @@ nav {
   align-items: center;
   width: 100%;
   padding: 1rem 2rem;
+  li {
+    padding: 2rem;
+    font-size: 2rem;
+    display: inline;
+    list-style: none;
+    color: white;
+    &:hover {
+      color: $secondary;
+    }
+  }
   h2 {
     color: white;
     font-size: 2rem;
@@ -46,33 +56,27 @@ nav {
     border: 1px solid $primary;
     border-radius: 30px;
     padding: 0 30px;
+    a {
+      font-size: 2rem;
+    }
+    &:hover {
+      color:white;
+      background-color: $primary;
+      border-color: white;
+      a {
+        color: white;
+      }
+    }
+    &:active {
+      transform: translateY(4px);
+    }
   }
-}
-
-button:hover {
-  color:$secondary;
-  background-color: $primary;
-  border-color: $primary;
-  transform: scale(1.3);
-}
-
-nav li:hover {
-  color: $secondary;
 }
 
 .lastname {
   color: $secondary;
   font-size: 2.4rem
 }
-
-li {
-  padding: 2rem;
-  font-size: 2rem;
-  display: inline;
-  list-style: none;
-  color: white;
-}
-
 
 // HEADER
 
@@ -98,13 +102,13 @@ header {
 
 .slidingherotext h1 {
   font-size: 5rem;
-  animation: 2s slide-right 1s forwards;
+  animation: 2s slide-right 1s forwards ease;
   transform:translateX(100%);
 }
 
 .slidingherotext h2 {
   font-size: 5rem;
-  animation: 2s slide-right 2s forwards;
+  animation: 2s slide-right 2s forwards ease;
   transform:translateX(100%);
 }
 
@@ -122,8 +126,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 600px;
-  background-color: rgb(24, 34, 54);
+  padding: 20rem 0;
+  background-color: $secondbackgroundcolor;
   a {
     font-size: 2rem;
     color: white;
@@ -208,11 +212,73 @@ div img {
 
 
 // CONTACT SECTION AND FORM
+.formsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-size: 2rem;
+  div {
+    font-size: 2rem;
+  }
 
+  .nameandemail input{
+    width: 98%;
+  }
+  
+}
 
+// FOOTER 
 
+footer{
+  p {
+    font-size: 1rem;
+  }
+  a,
+  h2 {
+    font-size: 2rem;
+    color: white;
+  }
+  .fa-brands,
+  .fa-solid {
+    font-size: 3rem;
+  }
+  a {
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
 
+.footerwrapper {
+  // height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10rem 0 2rem 0;
+}
+
+.footericons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10rem;
+  i {
+    margin: 0.7rem;
+  }
+}
+
+.footerlist {
+  h2 {
+    padding: 0.7rem;
+  }
+}
 
 // MEDIA QUERIES
 
@@ -222,3 +288,14 @@ div img {
     
   }
 }
+
+@media (max-width: 576px) {
+   .footerwrapper {
+    flex-direction: column;
+   }
+   .footericons {
+    margin-left: 0;
+    margin-top: 1rem;
+   }
+
+  }
