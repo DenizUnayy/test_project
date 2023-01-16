@@ -19,7 +19,7 @@ a {
 }
 
 body {
-  background-color: rgb(31, 39, 56);
+  background-color: $primary;
 }
 
 // NAVIGATION
@@ -29,47 +29,48 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  // background-color: black;
   padding: 1rem 2rem;
+  h2 {
+    color: white;
+    font-size: 2rem;
+  }
+  ul {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    font-size: 2rem;
+    height: 5rem;
+    border: 1px solid $primary;
+    border-radius: 30px;
+    padding: 0 30px;
+  }
 }
 
-nav h2 {
-  color: white;
-  font-size: 2rem;
+button:hover {
+  color:$secondary;
+  background-color: $primary;
+  border-color: $primary;
+  transform: scale(1.3);
+}
+
+nav li:hover {
+  color: $secondary;
 }
 
 .lastname {
-  color: rgb(245, 36, 36);
+  color: $secondary;
   font-size: 2.4rem
 }
+
 li {
   padding: 2rem;
   font-size: 2rem;
   display: inline;
   list-style: none;
   color: white;
-}
-
-nav ul {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav button {
-  font-size: 2rem;
-  height: 5rem;
-  border-radius: 30px;
-  border-color: black;
-  padding: 0 30px;
-}
-
-button:hover {
-  color:white;
-  background-color: black;
-  border-color: black;
-  transform: scale(1.3),1s;
 }
 
 
@@ -96,11 +97,13 @@ header {
 
 
 .slidingherotext h1 {
+  font-size: 5rem;
   animation: 2s slide-right 1s forwards;
   transform:translateX(100%);
 }
 
 .slidingherotext h2 {
+  font-size: 5rem;
   animation: 2s slide-right 2s forwards;
   transform:translateX(100%);
 }
@@ -112,10 +115,6 @@ header {
   }
 }
 
-.slidingherotext h1,
-.slidingherotext h2  {
-  font-size: 5rem;
-}
 
 // ABOUT ME 
 .about {
@@ -129,26 +128,23 @@ header {
     font-size: 2rem;
     color: white;
   }
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
 }
 
 .about p:hover {
   .dcihover {
-    color: rgb(245, 36, 36);
+    color: $secondary;
   }
 }
 
 .aboutme {
   width: 70%;
 }
-
-.about h2 {
-  text-align: center;
-  color: white;
-  font-size: 4rem;
-  margin-bottom: 5rem;
-}
-
-
 
 p {
   text-align: center;
@@ -166,13 +162,12 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.skillssection h2 {
-  text-align: center;
-  color: white;
-  font-size: 4rem;
-  margin-bottom: 5rem;
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
 }
 
 .skills {
@@ -180,19 +175,17 @@ p {
   align-items: center;
   justify-content: space-around;
   display: flex;
+  align-content: flex-end;
   flex-wrap: wrap;
-    img {
-      margin: 3rem 0;
-    }
+}
+
+.skillbox {
+  margin: 1rem 3rem;
 }
 
 div img {
   height: 20rem;
 }
-
-// .skillbox:hover {
-//     transform: scale(1.3);
-// }
 
 .skillbox:hover {
   animation-name: bounce-7;
@@ -211,9 +204,17 @@ div img {
 }
 
 
-// CONTACT PAGE AND FORM
+// PROJECTS SECTION
 
 
+// CONTACT SECTION AND FORM
+
+
+
+
+
+
+// MEDIA QUERIES
 
 @media (max-width: 768px) {
   header {
