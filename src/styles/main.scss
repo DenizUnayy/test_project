@@ -52,17 +52,16 @@ nav {
     justify-content: center;
     align-items: center;
   }
-}
-
-.contacticonstop {
-  .fa-brands,
-  .fa-solid {
-    padding: 0 1rem;
-    color: white;
-    font-size: 3rem;
-    &:hover {
-      color: $secondary;
-      transform: scale(1.2);
+  .contacticonstop {
+    .fa-brands,
+    .fa-solid {
+      padding: 0 1rem;
+      color: white;
+      font-size: 3rem;
+      &:hover {
+        color: $secondary;
+        transform: scale(1.2);
+      }
     }
   }
 }
@@ -95,6 +94,7 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0 2rem;
     }
 }
 
@@ -304,8 +304,21 @@ footer{
 
 @media (max-width: 768px) {
   header {
-    background-position: center;
-    
+  width: 100vw;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: initial;
+  }
+  nav {
+    ul {
+      display: none;
+    }
+  }
+  .herotext {
+    h1, h2 {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -318,4 +331,12 @@ footer{
     margin-top: 1rem;
    }
 
+   .contacticonstop {
+    display: none;
   }
+  }
+
+  
+
+
+  
