@@ -175,7 +175,7 @@ p {
 // SKILLS SECTION
 
 .skillssection {
-  margin: 5rem 0;
+  padding: 10rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,13 +223,32 @@ div img {
 
 
 // PROJECTS SECTION
-.projects{
-  h2{
-    color: white;
+.projects {
+  padding: 10rem 0;
+  background-color: $secondbackgroundcolor;
+  h2 {
     font-size: 4rem;
+    color: white;
     text-align: center;
   }
 }
+
+.projectswrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 10rem 3rem 10rem;
+}
+
+.projectbox {
+  background-color: white;
+  border: 2px solid red;
+  height: 30rem;
+  margin: 3rem;
+  flex-basis: 25%;
+  min-width: 250px;
+}
+
 
 
 // FOOTER 
@@ -334,6 +353,17 @@ footer{
         height: 400px;
       }
       
+    }
+  }
+  nav {
+    justify-content: center;
+    .logo {
+      h2 {
+        font-size: 3rem;
+      }
+      .lastname {
+        font-size: 3.4rem;
+      }
     }
   }
   }
