@@ -98,34 +98,6 @@ header {
     }
 }
 
-// SLIDING TEXT
-
-// .slidingherotext  {
-//   color: white;
-//   overflow: hidden;
-// }
-
-
-// .slidingherotext h1 {
-//   font-size: 5rem;
-//   animation: 2s slide-right 1s forwards ease;
-//   transform:translateX(100%);
-// }
-
-// .slidingherotext h2 {
-//   font-size: 5rem;
-//   animation: 2s slide-right 2s forwards ease;
-//   transform:translateX(100%);
-// }
-
-
-// @keyframes slide-right {
-//   to {
-//     transform:translateX(0);
-//   }
-// }
-
-
 // ABOUT ME 
 .about {
   padding: 20rem 0;
@@ -201,7 +173,7 @@ p {
   margin: 1rem 3rem;
 }
 
-div img {
+.skillbox img {
   height: 20rem;
 }
 
@@ -224,6 +196,8 @@ div img {
 
 // PROJECTS SECTION
 .projects {
+  width: 100%;
+  align-items: center;
   padding: 10rem 0;
   background-color: $secondbackgroundcolor;
   h2 {
@@ -237,16 +211,74 @@ div img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 4rem 10rem 3rem 10rem;
 }
 
-.projectbox {
-  background-color: white;
-  border: 2px solid red;
+.img-wrapper {
   height: 30rem;
   margin: 3rem;
-  flex-basis: 25%;
-  min-width: 250px;
+  flex-basis: 300px;   
+  min-width: 250px; 
+  position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper > img {
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+  object-position: center;
+}
+
+.img-wrapper > .content {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  font-size: 2rem; 
+  color: black;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+// PROJECTS ANIMATIONS
+
+.img-wrapper > img,
+.img-wrapper > .content {
+    transition: 300ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+  filter: blur(5px);
+}
+
+.img-wrapper > .content.fade {
+  opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade {
+  opacity: 1;
+}
+
+.img-wrapper:hover > img.zoom {
+  transform: scale(1.3);
+}
+
+// BUTTON STYLING FOR THE PROJECT SECTION
+
+.btn {
+  margin-top: 1rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  &:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+  }
 }
 
 
@@ -306,7 +338,7 @@ footer{
       flex-direction: column;
 
       .profilepic{
-        width: 70%;
+        width: 65%;
         margin-right: 0rem;
         margin-bottom: 3rem;
       }
