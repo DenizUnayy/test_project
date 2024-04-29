@@ -1,9 +1,9 @@
-// @import "base";
+@import "base";
 // You need the base only when you are not using bootstrap. In that case, go to _base.scss
 // to customize it as you may want.
 
 @import "variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Write your sass code here or import partials
 
@@ -274,10 +274,18 @@ p {
   margin-top: 1rem;
   font-size: 2rem;
   border: 2px solid black;
+  padding: 0.5rem;
   &:hover {
     background-color: black;
-    color: white;
-    border-color: black;
+    cursor: pointer;
+    a {
+      background-color: black;
+      color: white;
+    }
+  }
+  a {
+    margin-top: 1rem;
+    font-size: 2rem;
   }
 }
 

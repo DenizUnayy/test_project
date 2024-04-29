@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-size: 10px;
+  font-family: "Josefin Sans", serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: rgb(31, 39, 56);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 2rem 0 2rem;
+}
+nav li {
+  padding: 2rem;
+  font-size: 2rem;
+  display: inline;
+  list-style: none;
+  color: white;
+}
+nav li:hover {
+  color: rgb(245, 36, 36);
+}
+nav .logo h2 {
+  color: white;
+  font-size: 2rem;
+}
+nav ul {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .contacticonstop .fa-brands,
+nav .contacticonstop .fa-solid {
+  padding: 0 1rem;
+  color: white;
+  font-size: 3rem;
+}
+nav .contacticonstop .fa-brands:hover,
+nav .contacticonstop .fa-solid:hover {
+  color: rgb(245, 36, 36);
+  transform: scale(1.2);
+}
+
+.lastname {
+  color: rgb(245, 36, 36);
+  font-size: 2.4rem;
+}
+
+header {
+  height: 100vh;
+  width: 99vw;
+  background-image: url(../images/dusseldorf-2098164.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+header h1, header h2 {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+}
+header .herotext {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.about {
+  padding: 20rem 0;
+  background-color: rgb(24, 34, 54);
+}
+.about .aboutsectionwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .aboutsectionwrapper .aboutme {
+  width: 40%;
+  margin: 1rem;
+}
+.about .aboutsectionwrapper a {
+  font-size: 2rem;
+  color: white;
+}
+.about .aboutsectionwrapper h2 {
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.about .aboutsectionwrapper .profilepic {
+  height: 600px;
+  border-radius: 15px;
+  margin-right: 3rem;
+}
+
+.about p:hover .dcihover {
+  color: rgb(245, 36, 36);
+}
+
+p {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2;
+  color: white;
+  letter-spacing: 2.2;
+}
+
+.skillssection {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skillssection h2 {
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+.skills {
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.skillbox {
+  margin: 1rem 3rem;
+}
+
+.skillbox img {
+  height: 20rem;
+}
+
+.skillbox:hover {
+  animation-name: bounce-7;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce-7 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+.projects {
+  width: 100%;
+  align-items: center;
+  padding: 10rem 0;
+  background-color: rgb(24, 34, 54);
+}
+.projects h2 {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+
+.projectswrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 10rem 3rem 10rem;
+}
+
+.img-wrapper {
+  height: 30rem;
+  margin: 3rem;
+  flex-basis: 300px;
+  min-width: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper > img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.img-wrapper > .content {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  color: black;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.img-wrapper > img,
+.img-wrapper > .content {
+  transition: 300ms ease-in-out;
+}
+
+.img-wrapper:hover > img.blur {
+  filter: blur(5px);
+}
+
+.img-wrapper > .content.fade {
+  opacity: 0;
+}
+
+.img-wrapper:hover > .content.fade {
+  opacity: 1;
+}
+
+.img-wrapper:hover > img.zoom {
+  transform: scale(1.3);
+}
+
+.btn {
+  margin-top: 1rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+.btn:hover a {
+  background-color: black;
+  color: white;
+}
+.btn a {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+footer a,
+footer h2 {
+  font-size: 2rem;
+  color: white;
+}
+footer .fa-brands,
+footer .fa-solid {
+  font-size: 3rem;
+}
+footer a:hover {
+  color: rgb(245, 36, 36);
+}
+
+.footerwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10rem 0 2rem 0;
+}
+
+.footericons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10rem;
+}
+.footericons i {
+  margin: 0.7rem;
+}
+
+.footerlist h2 {
+  padding: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .about .aboutsectionwrapper {
+    flex-direction: column;
+  }
+  .about .aboutsectionwrapper .profilepic {
+    width: 65%;
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+  .about .aboutsectionwrapper .aboutme {
+    width: 70%;
+  }
+  header {
+    width: 100vw;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: initial;
+  }
+  nav ul {
+    display: none;
+  }
+  .herotext h1, .herotext h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .footerwrapper {
+    flex-direction: column;
+  }
+  .footericons {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .contacticonstop {
+    display: none;
+  }
+  .about .aboutsectionwrapper .profilepic {
+    height: 400px;
+  }
+  nav {
+    justify-content: center;
+  }
+  nav .logo h2 {
+    font-size: 3rem;
+  }
+  nav .logo .lastname {
+    font-size: 3.4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
